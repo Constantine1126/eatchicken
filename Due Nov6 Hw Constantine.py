@@ -17,7 +17,8 @@ def every_other_modify (list1):
     >>>every_other_modify (list1)
     [2,4]
     '''
-    for item in list [::2]
+    # we want the items in list1 to be removed
+    for item in list1[::2]:
         list1.remove (item)
 
 
@@ -28,10 +29,10 @@ def sum_of_even (list1):
     >>>sum_of_even([1,2,3,4])
     6
     '''
-    r=""
+    r=0 # we want to sum into a number, not a string
     for i in list1:
-        if i%2==0
-        r=r+i
+        if i%2==0:
+            r=r+i
     return r
 
 
@@ -45,7 +46,7 @@ def collect_strings (list1):
     '''
     r=""
     for item in list1:
-        r=r+item
+        r=r+str(item) # convert item into a string
     return r
 
 
@@ -56,10 +57,11 @@ def count_int (list1):
     >>>count_int(['skrrr',1,4,'skrrrrrrrr'])
     5
     '''
+    ## check your example for correctness
     num=0
     for i in list1:
         if type(i)==int:
-            num=mun+1
+            num=num+1
     return num
 
 
@@ -71,10 +73,10 @@ def remove_strings_modify (list1):
     >>>remove_strings_modify(list1)
     [7]
     '''
-    i=""
+    #i="" we don't need a new string
     for i in list1 [:]:
         if type(i)==str:
-            list1.remove(i)
+            list1.remove(i) # good!
 
 
 def mystery_10(list_of_number)->list:
@@ -85,9 +87,10 @@ def mystery_10(list_of_number)->list:
     >>>mystery_10([1,2,6,7])
     >>>[1,2,6,7,6,7]
     '''
-    1=[]
+    L=[] # we can't have a number as a variable
     for e in list_of_number:
         if e>limit:
-            1.append(e)
-    return 1 
+            L.append(e)
+    return L
+#good!
         
